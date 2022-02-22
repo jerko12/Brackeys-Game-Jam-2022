@@ -1,0 +1,26 @@
+The Doors Arent Real
+door types
+- clock doors
+- drawer doors
+
+Halways
+- select halways using items in a room or halway
+- if the door is opened the halway is placed
+- find out what item places which   
+
+Rooms 
+- clues
+
+
+Clues
+- where the exit is
+- where danger is
+- how to navigate the maze
+
+Tools
+- used to do certain things
+- Lantern to see unseen objects and hide fake objects.
+- Need A way to detect fakes?
+
+Keys
+- used to open certain doors
