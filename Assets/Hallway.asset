@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 312511dd8855d2243a4d1c2230d604e3, type: 3}
+  m_Name: Hallway
+  m_EditorClassIdentifier: 
+  hallway1: {fileID: 2257209944103019417, guid: 2be43b82a722d3843bf41a786880497a,
+    type: 3}
+  hallway2: {fileID: 1326481129728953198, guid: 9b8c7ff4e88545248937e6fc1a110518,
+    type: 3}
+  hallway3: {fileID: 1326481129728953198, guid: 88823c3ab0dba7c4e9f396455d8ceeaa,
+    type: 3}
+  hallway4: {fileID: 1326481129728953198, guid: eb5361817cb34ab46b50f89d5a44e62f,
+    type: 3}
+  hallway5: {fileID: 0}
+  hallway6: {fileID: 0}
+  hallway7: {fileID: 0}
+  hallway8: {fileID: 0}
