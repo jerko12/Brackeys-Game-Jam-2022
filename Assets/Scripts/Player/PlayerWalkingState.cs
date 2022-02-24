@@ -31,6 +31,7 @@ public class PlayerWalkingState : PlayerMovementState
     public override void interact()
     {
         base.interact();
+        player.interactionhandler.InteractWithCurrentInteractable();
     }
 
     public override void flashlight(bool value)

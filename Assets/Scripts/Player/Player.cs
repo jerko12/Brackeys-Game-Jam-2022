@@ -5,10 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public CharacterController controller;
+    public Interactionhandler interactionhandler;
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
+        interactionhandler = GetComponent<Interactionhandler>();
     }
 
     // Start is called before the first frame update

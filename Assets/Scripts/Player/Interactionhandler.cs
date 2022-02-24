@@ -23,7 +23,6 @@ public class Interactionhandler : MonoBehaviour
         RaycastHit hit;
         if(Physics.SphereCast(cam.ScreenPointToRay(new Vector2(Screen.width/2,Screen.height/2)),interactionRadius, out hit, interactionDistance, interactionLayer))
         {
-            Debug.Log("SPHERECAST HIT");
             if(hit.transform.TryGetComponent(out IInteractable _hitInteractable)){
                 updateCurrentInteractable(_hitInteractable);
             }
@@ -46,5 +45,11 @@ public class Interactionhandler : MonoBehaviour
         if(currentInteractable != null) currentInteractable.Deselected();
         currentInteractable = interactable;
         if (currentInteractable != null) currentInteractable.Selected();
+    }
+
+    public void InteractWithCurrentInteractable()
+    {
+        if (currentInteractable == null) return;
+        currentInteractable.Interact();
     }
 }
