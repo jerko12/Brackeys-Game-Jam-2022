@@ -20,8 +20,9 @@ public class LevelLayout : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlaceHallway(2, 1, 2);
-        PlaceHallway(1, 2, 2);
+        PlaceHallway(2, 0, 0,Quaternion.LookRotation(Vector3.back,Vector3.up));
+        //PlaceHallway(2, 1, 2);
+        //PlaceHallway(1, 2, 2);
     }
 
     public void Setup()
@@ -49,11 +50,15 @@ public class LevelLayout : MonoBehaviour
         }
     }
 
-    public void PlaceHallway(int _index,int x,int y)
+    public void PlaceHallway(int _index, int x, int y, Quaternion rotation)
     {
         GameObject _hallway = Instantiate(hallway.GetHallway(_index), grid[x][y].transform);
+        _hallway.transform.rotation = rotation;
         _hallway.transform.localPosition = Vector3.zero;
         grid[x][y].type = GridPoint.gridType.hallway1;
+
+        
+        
     }
 
     // Update is called once per frame

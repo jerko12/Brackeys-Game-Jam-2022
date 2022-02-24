@@ -20,7 +20,11 @@ MonoBehaviour:
     type: 3}
   hallway4: {fileID: 1326481129728953198, guid: eb5361817cb34ab46b50f89d5a44e62f,
     type: 3}
-  hallway5: {fileID: 0}
-  hallway6: {fileID: 0}
-  hallway7: {fileID: 0}
-  hallway8: {fileID: 0}
+  hallway5: {fileID: 1326481129728953198, guid: d377380a3cd975e419a9f86b96a7dd5b,
+    type: 3}
+  hallway6: {fileID: 1326481129728953198, guid: 5014e2e7b1ade6545a8039bcb783de14,
+    type: 3}
+  hallway7: {fileID: 1326481129728953198, guid: c6c09f542bb5a3a4da4dc135331d0a86,
+    type: 3}
+  hallway8: {fileID: 2257209944103019417, guid: 2be43b82a722d3843bf41a786880497a,
+    type: 3}

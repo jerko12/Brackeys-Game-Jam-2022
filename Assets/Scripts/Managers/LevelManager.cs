@@ -7,4 +7,9 @@ public class LevelManager : Singleton<LevelManager>
     //rooms
     //halways
     //layout
+    public LevelLayout layout;
+    private void Awake()
+    {
+        layout = GetComponentInChildren<LevelLayout>();
+    }
 }

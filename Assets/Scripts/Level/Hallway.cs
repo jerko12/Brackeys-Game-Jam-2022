@@ -5,6 +5,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Hallway", menuName = "HallwaySetup", order = 1)]
 public class Hallway : ScriptableObject
 {
+    public enum FacingDirecion
+    {
+        forward,
+        backward,
+        left,
+        right
+    }
+
     public GameObject hallway1;
     public GameObject hallway2;
     public GameObject hallway3;
