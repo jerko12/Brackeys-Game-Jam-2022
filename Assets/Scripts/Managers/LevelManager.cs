@@ -8,8 +8,11 @@ public class LevelManager : Singleton<LevelManager>
     //halways
     //layout
     public LevelLayout layout;
-    private void Awake()
+    public override void Awake()
     {
-        layout = GetComponentInChildren<LevelLayout>();
+        base.Awake();
+        layout = GetComponent<LevelLayout>();
     }
+
+    
 }

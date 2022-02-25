@@ -2,10 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Hallway", menuName = "HallwaySetup", order = 1)]
-public class Hallway : ScriptableObject
+public class Hallway : MonoBehaviour
 {
-    public enum FacingDirecion
+    public Vector2Int gridPosition;
+    public List<Door> doors;
+    public HallwaySettings hallwayStyle;
+
+    private void Awake()
+    {
+        foreach(Door door in doors)
+        {
+            door.onInteraction.AddListener(PlaceHallway);
+            door.doorLocation = gridPosition;
+        }
+    }
+    private void Start()
+    {
+        
+    }
+
+    public void PlaceHallway(Quaternion rotation)
+    {
+        Vector2Int goalPosition = gridPosition;
+        switch (GetDirectionFromQuaternion(rotation))
+        {
+            case direction.forward: goalPosition += Vector2Int.up;break;
+            case direction.backward: goalPosition += Vector2Int.down;break;
+            case direction.left: goalPosition += Vector2Int.left;break;
+            case direction.right: goalPosition += Vector2Int.right;break;
+        }
+
+        LevelManager.Instance.layout.PlaceHallway(7, goalPosition.x, goalPosition.y, rotation);
+    }
+
+    public enum direction
     {
         forward,
         backward,
@@ -13,30 +43,23 @@ public class Hallway : ScriptableObject
         right
     }
 
-    public GameObject hallway1;
-    public GameObject hallway2;
-    public GameObject hallway3;
-    public GameObject hallway4;
-    public GameObject hallway5;
-    public GameObject hallway6;
-    public GameObject hallway7;
-    public GameObject hallway8;
-
-    public GameObject GetHallway(int index)
+    public direction GetDirectionFromQuaternion(Quaternion rotation)
     {
-        switch (index)
-        {
-            case 1: return hallway1; break;
-            case 2: return hallway2; break;
-            case 3: return hallway3; break;
-            case 4: return hallway4; break;
-            case 5: return hallway5; break;
-            case 6: return hallway6; break;
-            case 7: return hallway7; break;
-            case 8: return hallway8; break;
-        
-        }
+        Vector3 direction = rotation * Vector3.forward;
 
-        return null;
+        direction currentDirection = Hallway.direction.forward;
+
+        float forwardAngle = Vector3.Angle(Vector3.forward, direction);
+        float backwardAngle = Vector3.Angle(Vector3.back, direction);
+        float leftAngle = Vector3.Angle(Vector3.left, direction);
+        float rightAngle = Vector3.Angle(Vector3.right, direction);
+
+        float currentAngle = forwardAngle;
+        
+        if(backwardAngle < currentAngle) { currentAngle = backwardAngle; currentDirection = Hallway.direction.backward; }
+        if(leftAngle < currentAngle) { currentAngle = leftAngle; currentDirection = Hallway.direction.left; }
+        if(rightAngle < currentAngle) { currentAngle = rightAngle; currentDirection = Hallway.direction.right; }
+
+        return currentDirection;
     }
 }

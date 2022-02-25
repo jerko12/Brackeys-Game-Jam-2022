@@ -9,7 +9,7 @@ public class LevelLayout : MonoBehaviour
     public float gridDistance = 3;
     public GridPoint[][] grid;
 
-    public Hallway hallway;
+    public HallwaySettings hallway;
 
     private void Awake()
     {
@@ -20,7 +20,7 @@ public class LevelLayout : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlaceHallway(2, 0, 0,Quaternion.LookRotation(Vector3.back,Vector3.up));
+        PlaceHallway(7, 0, 0,Quaternion.LookRotation(Vector3.back,Vector3.up));
         //PlaceHallway(2, 1, 2);
         //PlaceHallway(1, 2, 2);
     }
@@ -52,13 +52,36 @@ public class LevelLayout : MonoBehaviour
 
     public void PlaceHallway(int _index, int x, int y, Quaternion rotation)
     {
-        GameObject _hallway = Instantiate(hallway.GetHallway(_index), grid[x][y].transform);
-        _hallway.transform.rotation = rotation;
-        _hallway.transform.localPosition = Vector3.zero;
-        grid[x][y].type = GridPoint.gridType.hallway1;
+        if (grid[x][y].type == GridPoint.gridType.air)
+        {
+            GameObject _hallway = Instantiate(hallway.GetHallway(_index), grid[x][y].transform);
+            _hallway.transform.rotation = rotation;
+            _hallway.transform.localPosition = Vector3.zero;
+            if (_hallway.TryGetComponent(out Hallway _hall))
+            {
+                _hall.gridPosition = new Vector2Int(x, y);
+            }
+            grid[x][y].type = GridPoint.gridType.hallway1;
+        }
+        
+        
+    }
 
-        
-        
+    public void PlaceHallway(int _index, HallwaySettings hallwayStyle, int x, int y, Quaternion rotation)
+    {
+        if (grid[x][y].type == GridPoint.gridType.air)
+        {
+            GameObject _hallway = Instantiate(hallwayStyle.GetHallway(_index), grid[x][y].transform);
+            _hallway.transform.rotation = rotation;
+            _hallway.transform.localPosition = Vector3.zero;
+            if (_hallway.TryGetComponent(out Hallway _hall))
+            {
+                _hall.gridPosition = new Vector2Int(x, y);
+            }
+            grid[x][y].type = GridPoint.gridType.hallway1;
+        }
+
+
     }
 
     // Update is called once per frame
