@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CameraRig : MonoBehaviour
 {
+    public Player player;
+    
     [SerializeField] private Transform followTarget;
 
     [SerializeField] private float horizontalSpeed = 10.0f;
@@ -17,6 +19,11 @@ public class CameraRig : MonoBehaviour
 
     void Update()
     {
+        if (player.currentState == Player.state.clock)
+        {
+            return;
+        }
+        
         Vector2 deltaInput = InputManager.Instance.GetLookDelta();
         currentRotation.x += deltaInput.x * horizontalSpeed * Time.deltaTime;
         currentRotation.y -= deltaInput.y * verticalSpeed * Time.deltaTime;
