@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
     public CharacterController controller;
     public Interactionhandler interactionhandler;
 
+    public GameObject camPosition;
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
