@@ -49,7 +49,7 @@ public class Clock : MonoBehaviour,IInteractable
         Vector3 to = new Vector3(0, 0, selectedHallway * 45);
             if (Vector3.Distance(hourHand.eulerAngles, to) > 0.01f)
             {
-                hourHand.rotation = Quaternion.Lerp(hourHand.rotation, Quaternion.Euler(0, 0, selectedHallway * 45), 0.5f);
+                hourHand.rotation = Quaternion.Lerp(hourHand.rotation, Quaternion.Euler(0, 0, selectedHallway * 45), rotationSpeed * Time.deltaTime);
                 rotating = true;
             }
             else
