@@ -17,6 +17,12 @@ public class CameraRig : MonoBehaviour
     [SerializeField] private Vector3 currentRotation;
     [SerializeField] private Vector3 currentRotationLerped;
 
+    public void SetRotation(Quaternion rotation)
+    {
+        currentRotation = rotation * currentRotation;
+        currentRotationLerped = rotation * currentRotationLerped;
+    }
+
     void Update()
     {
         if (player.currentState == Player.state.clock)

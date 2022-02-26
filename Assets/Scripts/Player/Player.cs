@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     
     [SerializeField] private PlayerWalkingState walk;
     [SerializeField] private PlayerClockState clock;
+    public GameObject camPosition;
+
     public enum state
     {
         idle,

@@ -1,12 +1,14 @@
-using Cinemachine;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
-namespace Managers
+public class CameraManager : Singleton<CameraManager>
 {
-    public class CameraManager : MonoBehaviour
-    {
-        public CinemachineVirtualCamera playerCamera;
-        public CinemachineVirtualCamera clockCamera;
+
+    public Camera cam;
+    public CinemachineVirtualCamera playerCamera;
+    public CinemachineVirtualCamera clockCamera;
 
         public void SetState(string newState)
         {
@@ -22,5 +24,44 @@ namespace Managers
                     break;
             }
         }
+
+
+    public CameraRig rig;
+
+    public void TeleportCam(Vector3 location)
+    {
+        playerCamera.ForceCameraPosition(location,cam.transform.rotation);
+        cam.transform.position = location;
+        rig.transform.position = location;
     }
-}
+
+    public void TeleportCam(Vector3 location, Quaternion rotation)
+    {
+        playerCamera.enabled = false;
+
+        rig.SetRotation(rotation);
+        //cam.transform.rotation = rotation;
+        //cam.transform.position = location;
+        rig.transform.position = location;
+
+        playerCamera.enabled = true;
+
+        playerCamera.ForceCameraPosition(location, rotation);
+    }
+
+    public override void Awake()
+    {
+        base.Awake();
+        cam = Camera.main;
+    }
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
