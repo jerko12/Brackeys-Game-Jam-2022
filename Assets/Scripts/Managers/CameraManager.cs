@@ -10,27 +10,27 @@ public class CameraManager : Singleton<CameraManager>
     public CinemachineVirtualCamera playerCamera;
     public CinemachineVirtualCamera clockCamera;
 
-        public void SetState(string newState)
+    public void SetState(string newState)
+    {
+        switch (newState)
         {
-            switch (newState)
-            {
-                case "clock":
-                    playerCamera.Priority = 1;
-                    clockCamera.Priority = 60;
-                    break;
-                default:
-                    playerCamera.Priority = 60;
-                    clockCamera.Priority = 1;
-                    break;
-            }
+            case "clock":
+                playerCamera.Priority = 1;
+                clockCamera.Priority = 60;
+                break;
+            default:
+                playerCamera.Priority = 60;
+                clockCamera.Priority = 1;
+                break;
         }
+    }
 
 
     public CameraRig rig;
 
     public void TeleportCam(Vector3 location)
     {
-        playerCamera.ForceCameraPosition(location,cam.transform.rotation);
+        playerCamera.ForceCameraPosition(location, cam.transform.rotation);
         cam.transform.position = location;
         rig.transform.position = location;
     }
@@ -59,9 +59,12 @@ public class CameraManager : Singleton<CameraManager>
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+    }
+}
