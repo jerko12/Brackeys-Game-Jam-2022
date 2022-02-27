@@ -118,7 +118,7 @@ public class LevelLayout : MonoBehaviour
 
             switch (LevelManager.GetDirectionFromQuaternion(rotation))
             {
-                case LevelManager.direction.forward: rotator = Quaternion.Euler(0, 270, 0); break;
+                case LevelManager.direction.forward: rotator = Quaternion.Euler(0, -90, 0); break;
                 case LevelManager.direction.backward: rotator = Quaternion.Euler(0, 90, 0); break;
                 case LevelManager.direction.left: rotator = Quaternion.Euler(0,0,0);break;
                 case LevelManager.direction.right:;break;

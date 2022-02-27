@@ -19,8 +19,15 @@ public class CameraRig : MonoBehaviour
 
     public void SetRotation(Quaternion rotation)
     {
-        currentRotation = rotation * currentRotation;
-        currentRotationLerped = rotation * currentRotationLerped;
+        Vector3 currentRotationVertical = new Vector3(0,currentRotation.y,0);
+        currentRotationVertical = rotation * currentRotationVertical;
+        currentRotation = new Vector3(currentRotation.x, currentRotationVertical.y, 0);
+
+        Debug.Log(currentRotation);
+        currentRotationVertical = new Vector3(0,currentRotationLerped.y,0);
+        currentRotationVertical = rotation * currentRotationVertical;
+        currentRotationLerped = new Vector3(currentRotationLerped.x, currentRotationVertical.y,.0f);
+
     }
 
     void Update()
@@ -31,6 +38,8 @@ public class CameraRig : MonoBehaviour
         }
         
         Vector2 deltaInput = InputManager.Instance.GetLookDelta();
+
+
         currentRotation.x += deltaInput.x * horizontalSpeed * Time.deltaTime;
         currentRotation.y -= deltaInput.y * verticalSpeed * Time.deltaTime;
         currentRotation.y = Mathf.Clamp(currentRotation.y, verticalClamp.x, verticalClamp.y);
