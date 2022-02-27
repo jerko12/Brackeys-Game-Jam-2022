@@ -52,7 +52,7 @@ MonoBehaviour:
   gridPosition: {x: 0, y: 0}
   FakePositions: []
   doors:
-  - {fileID: 9141506455658164812}
+  - {fileID: 3850933359332047035}
   hallwayStyle: {fileID: 11400000, guid: 7fb8263e96512c444b5e57f5e3cac61d, type: 2}
 --- !u!1 &4018192167616540139
 GameObject:
@@ -1208,6 +1208,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6621090195332241143}
     m_Modifications:
+    - target: {fileID: 955806303130510910, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1318791941225619986, guid: 8cf647375e4af02468968b1236edb303,
         type: 3}
       propertyPath: m_Shape
@@ -1217,6 +1222,16 @@ PrefabInstance:
         type: 3}
       propertyPath: managedReferences[6416280945118675436]
       value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613094779109266499, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293172619478652784, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3605883359920290605, guid: 8cf647375e4af02468968b1236edb303,
         type: 3}
@@ -1298,7 +1313,17 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4804745176450313381, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6575774668414663599, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718693823573287371, guid: 8cf647375e4af02468968b1236edb303,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1326,9 +1351,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7055131190063232412}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &9141506455658164812 stripped
+--- !u!114 &3850933359332047035 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2248980391028230096, guid: 8cf647375e4af02468968b1236edb303,
+  m_CorrespondingSourceObject: {fileID: 6096078447527808295, guid: 8cf647375e4af02468968b1236edb303,
     type: 3}
   m_PrefabInstance: {fileID: 7055131190063232412}
   m_PrefabAsset: {fileID: 0}

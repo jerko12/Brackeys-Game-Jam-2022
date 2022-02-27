@@ -54,8 +54,8 @@ MonoBehaviour:
   gridPosition: {x: 0, y: 0}
   FakePositions: []
   doors:
-  - {fileID: 131369999312524026}
-  - {fileID: 1458003986870265717}
+  - {fileID: 5367970376211716109}
+  - {fileID: 6888178844759534978}
   hallwayStyle: {fileID: 11400000, guid: 7fb8263e96512c444b5e57f5e3cac61d, type: 2}
 --- !u!1 &8849340971067319602
 GameObject:
@@ -281,6 +281,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6258162353077239296}
     m_Modifications:
+    - target: {fileID: 955806303130510910, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1318791941225619986, guid: 8cf647375e4af02468968b1236edb303,
         type: 3}
       propertyPath: m_Shape
@@ -290,6 +295,16 @@ PrefabInstance:
         type: 3}
       propertyPath: managedReferences[6416280945118675298]
       value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613094779109266499, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293172619478652784, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3605883359920290605, guid: 8cf647375e4af02468968b1236edb303,
         type: 3}
@@ -376,7 +391,17 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4804745176450313381, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6575774668414663599, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718693823573287371, guid: 8cf647375e4af02468968b1236edb303,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -409,9 +434,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 796615032259469477}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1458003986870265717 stripped
+--- !u!114 &6888178844759534978 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2248980391028230096, guid: 8cf647375e4af02468968b1236edb303,
+  m_CorrespondingSourceObject: {fileID: 6096078447527808295, guid: 8cf647375e4af02468968b1236edb303,
     type: 3}
   m_PrefabInstance: {fileID: 796615032259469477}
   m_PrefabAsset: {fileID: 0}
@@ -638,6 +663,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6258162353077239296}
     m_Modifications:
+    - target: {fileID: 955806303130510910, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1318791941225619986, guid: 8cf647375e4af02468968b1236edb303,
         type: 3}
       propertyPath: m_Shape
@@ -647,6 +677,16 @@ PrefabInstance:
         type: 3}
       propertyPath: managedReferences[6416280945118675474]
       value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613094779109266499, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293172619478652784, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3605883359920290605, guid: 8cf647375e4af02468968b1236edb303,
         type: 3}
@@ -733,7 +773,17 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4804745176450313381, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6575774668414663599, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718693823573287371, guid: 8cf647375e4af02468968b1236edb303,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -766,9 +816,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2226822832906835242}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &131369999312524026 stripped
+--- !u!114 &5367970376211716109 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2248980391028230096, guid: 8cf647375e4af02468968b1236edb303,
+  m_CorrespondingSourceObject: {fileID: 6096078447527808295, guid: 8cf647375e4af02468968b1236edb303,
     type: 3}
   m_PrefabInstance: {fileID: 2226822832906835242}
   m_PrefabAsset: {fileID: 0}

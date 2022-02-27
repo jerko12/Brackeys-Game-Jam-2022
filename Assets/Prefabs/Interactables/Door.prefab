@@ -9,9 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3644361152819380953}
-  - component: {fileID: 8748024493019453497}
-  - component: {fileID: 4653661064140078165}
-  m_Layer: 6
+  - component: {fileID: 9027275746213692255}
+  m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,8 +24,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2965456864312846247}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.00000034272668, z: -0, w: 1}
+  m_LocalPosition: {x: 0.85, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34,26 +33,7 @@ Transform:
   m_Father: {fileID: 3856685957157341945}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8748024493019453497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2965456864312846247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c1753e7caab7a74495d01715da8b5c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLocation: {x: 0, y: 0}
-  additiveDoorLocation: {x: 0, y: 0}
-  onInteraction:
-    m_PersistentCalls:
-      m_Calls: []
-  opened: 0
-  isLocked: 0
---- !u!65 &4653661064140078165
+--- !u!65 &9027275746213692255
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,8 +44,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.25, y: 2.6, z: 0.1}
-  m_Center: {x: 1.5, y: 1.3, z: 0}
+  m_Size: {x: 1.3, y: 2.6, z: 0.1}
+  m_Center: {x: 0.65, y: 1.3, z: 0}
 --- !u!1 &3040968219275957015
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,7 +59,8 @@ GameObject:
   - component: {fileID: 1318791941225619986}
   - component: {fileID: 6885566078631762348}
   - component: {fileID: 8155361321824224760}
-  m_Layer: 6
+  - component: {fileID: 955806303130510910}
+  m_Layer: 0
   m_Name: DoorPost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 6416280924318073332
+    rid: 6416280979734790974
   m_Size: {x: 0.2, y: 3, z: 2}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 0
@@ -343,7 +324,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 6416280924318073332
+    - rid: 6416280979734790974
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!23 &6885566078631762348
 MeshRenderer:
@@ -395,6 +376,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3040968219275957015}
   m_Mesh: {fileID: 0}
+--- !u!64 &955806303130510910
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3040968219275957015}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &3605883359920290605
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,6 +399,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3856685957157341945}
+  - component: {fileID: 6096078447527808295}
+  - component: {fileID: 6979694764752517248}
   m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
@@ -430,6 +427,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6096078447527808295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3605883359920290605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1753e7caab7a74495d01715da8b5c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorLocation: {x: 0, y: 0}
+  additiveDoorLocation: {x: 0, y: 0}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
+  col: {fileID: 9027275746213692255}
+  opened: 0
+  isLocked: 0
+  door: {fileID: 2965456864312846247}
+--- !u!65 &6979694764752517248
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3605883359920290605}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.25, y: 2.6, z: 0.1}
+  m_Center: {x: 1.5, y: 1.3, z: 0}
 --- !u!1 &7954110070236754276
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,7 +474,8 @@ GameObject:
   - component: {fileID: 8632602564901451420}
   - component: {fileID: 8977382815250405443}
   - component: {fileID: 3293172619478652784}
-  m_Layer: 6
+  - component: {fileID: 4804745176450313381}
+  m_Layer: 0
   m_Name: DoorPost (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -695,7 +727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 6416280924318073332
+    rid: 6416280979734790886
   m_Size: {x: 0.2, y: 3, z: 2}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 0
@@ -707,7 +739,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 6416280924318073332
+    - rid: 6416280979734790886
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!23 &8977382815250405443
 MeshRenderer:
@@ -759,6 +791,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7954110070236754276}
   m_Mesh: {fileID: 0}
+--- !u!64 &4804745176450313381
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7954110070236754276}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &9190416057661268778
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,7 +818,8 @@ GameObject:
   - component: {fileID: 8969923159201479879}
   - component: {fileID: 7563795917731156325}
   - component: {fileID: 6718693823573287371}
-  m_Layer: 6
+  - component: {fileID: 1613094779109266499}
+  m_Layer: 0
   m_Name: DoorPost (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1024,7 +1071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shape:
-    rid: 6416280924318073332
+    rid: 6416280979734791042
   m_Size: {x: 0.2, y: 3, z: 2}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_PivotLocation: 0
@@ -1036,7 +1083,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 6416280924318073332
+    - rid: 6416280979734791042
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
 --- !u!23 &7563795917731156325
 MeshRenderer:
@@ -1088,6 +1135,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9190416057661268778}
   m_Mesh: {fileID: 0}
+--- !u!64 &1613094779109266499
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9190416057661268778}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &2093217233691639057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1118,7 +1179,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0a562ef41a6e3fa4b974a0349036eca9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a562ef41a6e3fa4b974a0349036eca9,
         type: 3}

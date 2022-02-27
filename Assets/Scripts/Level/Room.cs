@@ -9,6 +9,8 @@ public class Room : MonoBehaviour
     public List<Door> doors;
     public HallwaySettings hallwayStyle;
 
+   
+
     private void Awake()
     {
         foreach(Door door in doors)

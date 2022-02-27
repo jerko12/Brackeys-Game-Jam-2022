@@ -8,8 +8,12 @@ public class Door : MonoBehaviour,IInteractable
     public Vector2Int doorLocation = Vector2Int.zero;
     public Vector2Int additiveDoorLocation = Vector2Int.zero;
     public UnityEvent<Door> onInteraction;
+    public Collider col;
+
     public bool opened = false;
     public bool isLocked = false;
+
+    [SerializeField] private GameObject door;
 
     public void Selected()
     {
@@ -34,11 +38,13 @@ public class Door : MonoBehaviour,IInteractable
 
     public void Open()
     {
-        gameObject.SetActive(false);
+        door.SetActive(false);
+        col.enabled = false;
     }
 
     public void Close()
     {
-        gameObject.SetActive(false);
+        door.gameObject.SetActive(false);
+        col.enabled = false;
     }
 }
