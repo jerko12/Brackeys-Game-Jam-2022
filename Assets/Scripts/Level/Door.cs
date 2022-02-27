@@ -12,6 +12,12 @@ public class Door : MonoBehaviour,IInteractable
 
     public bool opened = false;
     public bool isLocked = false;
+    public Animator animator;
+    public AudioSource openSound;
+    public AudioSource closeSound;
+    
+    private static readonly int Opening = Animator.StringToHash("opening");
+    private static readonly int Closing = Animator.StringToHash("closing");
 
     [SerializeField] private GameObject door;
 
@@ -40,11 +46,33 @@ public class Door : MonoBehaviour,IInteractable
     {
         door.SetActive(false);
         col.enabled = false;
+        if (!animator.GetBool(Opening))
+        {
+            Debug.Log("Opening door");
+            openSound.Play();
+            animator.SetBool(Opening, true);
+        }
+        
     }
 
     public void Close()
     {
         door.gameObject.SetActive(false);
         col.enabled = false;
+        if (!animator.GetBool(Closing))
+        {
+            animator.SetBool(Closing, true);
+        }
+    }
+
+    public void Opened()
+    {
+        animator.SetBool(Opening, false);
+    }
+
+    public void Closed()
+    {
+        closeSound.Play();
+        animator.SetBool(Closing, false);
     }
 }
