@@ -18,7 +18,7 @@ public class Clock : MonoBehaviour,IInteractable
     public AudioSource windSound;
 
     [SerializeField] private int selectedHallway = 1;
-    [SerializeField] private UnityEvent hallwayChanged;
+    [SerializeField] private UnityEvent<int> hallwayChanged;
     private bool rotating = false;
 
     public void Selected()
@@ -54,7 +54,7 @@ public class Clock : MonoBehaviour,IInteractable
             else
             {
                 rotating = false;
-                hallwayChanged.Invoke();
+                hallwayChanged.Invoke(selectedHallway);
             }
     }
 

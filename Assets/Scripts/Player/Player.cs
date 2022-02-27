@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public CharacterController controller;
     public Interactionhandler interactionhandler;
     
-    [SerializeField] private PlayerWalkingState walk;
+    public PlayerWalkingState walk;
     [SerializeField] private PlayerClockState clock;
     public GameObject camPosition;
 

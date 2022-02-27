@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LevelLayout : MonoBehaviour
 {
+    public UnityEvent OnReset;
 
     public Vector2Int GridSize = new Vector2Int(5, 5);
     public Vector2Int ResetHallwayLocation = new Vector2Int(26, 25);
@@ -102,6 +104,7 @@ public class LevelLayout : MonoBehaviour
             if (_hallway.TryGetComponent(out Room _hall))
             {
                 _hall.gridPosition = goalLocation;
+                OnReset.AddListener(_hall.Reset);
             }
             grid[goalLocation.x][goalLocation.y].type = GridPoint.gridType.hallway1;
             return;
@@ -126,6 +129,8 @@ public class LevelLayout : MonoBehaviour
 
             playerPlacementDirection = rotator * playerPlacementDirection;
             playerPlacementRotation =  playerPlacementRotation * rotator;
+
+            OnReset?.Invoke();
 
             PlayerManager.Instance.Teleport(grid[ResetHallwayLocation.x][ResetHallwayLocation.y].transform.position + playerPlacementDirection,rotator);
 

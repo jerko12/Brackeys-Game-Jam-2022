@@ -10,6 +10,12 @@ public class PlayerWalkingState : PlayerMovementState
 
     public float moveSpeed = 3;
     public float lerpSpeed = 6;
+
+    public void RotateMoveDirection(Quaternion _rotation)
+    {
+        moveDirectionLerped = _rotation * moveDirectionLerped;
+    }
+
     public override void update()
     {
         base.update();

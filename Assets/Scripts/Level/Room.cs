@@ -8,7 +8,7 @@ public class Room : MonoBehaviour
     public List<Vector2Int> FakePositions;
     public List<Door> doors;
     public HallwaySettings hallwayStyle;
-
+    public int HallwayNumber = 0;
    
 
     private void Awake()
@@ -23,6 +23,10 @@ public class Room : MonoBehaviour
     {
         
     }
+    public void SetHallwayNumber(int _number)
+    {
+        HallwayNumber = _number;
+    }
 
     public void PlaceHallway(Door door)
     {
@@ -35,9 +39,14 @@ public class Room : MonoBehaviour
             case LevelManager.direction.right: goalPosition += Vector2Int.right;break;
         }
 
-        LevelManager.Instance.layout.PlaceHallway(Random.Range(1, 7), hallwayStyle, gridPosition + door.additiveDoorLocation, door.transform.rotation);
+        LevelManager.Instance.layout.PlaceHallway(HallwayNumber + 1, hallwayStyle, gridPosition + door.additiveDoorLocation, door.transform.rotation);
     }
 
+    public void Reset()
+    {
+        LevelManager.Instance.layout.grid[gridPosition.x][gridPosition.y].type = GridPoint.gridType.air;
+        Destroy(this.gameObject);
+    }
 
 
 }

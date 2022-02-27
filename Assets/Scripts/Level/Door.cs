@@ -34,17 +34,20 @@ public class Door : MonoBehaviour,IInteractable
     public void Interact()
     {
         if (isLocked) {Debug.Log("Door is locked!"); return; }
-        if (opened) return;
+        //if (opened) return;
         Debug.Log("Door Interacted");
         //LevelManager.Instance.layout.PlaceHallway(1, hallwayLocation.x, hallwayLocation.y, transform.rotation);
         onInteraction?.Invoke(this);
-        Open();
-        opened = true;
+        if (!opened) Open();
+       // else Close();
+
+
     }
 
     public void Open()
     {
         //door.SetActive(false);
+        opened = true;
         col.enabled = false;
         if (!animator.GetBool(Opening))
         {
@@ -58,21 +61,22 @@ public class Door : MonoBehaviour,IInteractable
     public void Close()
     {
         //door.gameObject.SetActive(false);
-        col.enabled = false;
-        if (!animator.GetBool(Closing))
+        opened = false;
+        col.enabled = true;
+        if (animator.GetBool(Opening))
         {
-            animator.SetBool(Closing, true);
+            animator.SetBool(Opening, false);
         }
     }
 
     public void Opened()
     {
-        animator.SetBool(Opening, false);
+        //animator.SetBool(Opening, false);
     }
 
     public void Closed()
     {
         closeSound.Play();
-        animator.SetBool(Closing, false);
+        //animator.SetBool(Closing, false);
     }
 }

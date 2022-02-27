@@ -9,6 +9,7 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         player.controller.enabled = false;
         player.transform.position = position;
+       
         CameraManager.Instance.TeleportCam(player.camPosition.transform.position);
         
         player.controller.enabled = true;
@@ -18,6 +19,7 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         player.controller.enabled = false;
         player.transform.position = position;
+        player.walk.RotateMoveDirection(rotation);
         CameraManager.Instance.TeleportCam(player.camPosition.transform.position,rotation);
         player.controller.enabled = true;
     }

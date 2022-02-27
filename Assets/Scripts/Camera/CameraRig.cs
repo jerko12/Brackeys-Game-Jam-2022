@@ -19,14 +19,16 @@ public class CameraRig : MonoBehaviour
 
     public void SetRotation(Quaternion rotation)
     {
-        Vector3 currentRotationVertical = new Vector3(0,currentRotation.y,0);
-        currentRotationVertical = rotation * currentRotationVertical;
-        currentRotation = new Vector3(currentRotation.x, currentRotationVertical.y, 0);
+        currentRotation.x += rotation.eulerAngles.y;
+        currentRotationLerped.x += rotation.eulerAngles.y;
+        //Vector3 currentRotationVertical = new Vector3(0,currentRotation.y,0);
+        //currentRotationVertical = rotation * currentRotationVertical;
+        //currentRotation = new Vector3(currentRotation.x, currentRotationVertical.y, 0);
 
-        Debug.Log(currentRotation);
-        currentRotationVertical = new Vector3(0,currentRotationLerped.y,0);
-        currentRotationVertical = rotation * currentRotationVertical;
-        currentRotationLerped = new Vector3(currentRotationLerped.x, currentRotationVertical.y,.0f);
+        Debug.Log("Y Rotation: " + rotation.eulerAngles.y);
+        //currentRotationVertical = new Vector3(0,currentRotationLerped.y,0);
+        //currentRotationVertical = rotation * currentRotationVertical;
+        //currentRotationLerped = new Vector3(currentRotationLerped.x, currentRotationVertical.y,.0f);
 
     }
 
