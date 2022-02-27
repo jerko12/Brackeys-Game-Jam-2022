@@ -10,6 +10,12 @@ public class Door : MonoBehaviour,IInteractable
     public UnityEvent<Door> onInteraction;
     public bool opened = false;
     public bool isLocked = false;
+    public Animator animator;
+    public AudioSource openSound;
+    public AudioSource closeSound;
+    
+    private static readonly int Opening = Animator.StringToHash("opening");
+    private static readonly int Closing = Animator.StringToHash("closing");
 
     public void Selected()
     {
@@ -34,11 +40,31 @@ public class Door : MonoBehaviour,IInteractable
 
     public void Open()
     {
-        gameObject.SetActive(false);
+        if (!animator.GetBool(Opening))
+        {
+            Debug.Log("Opening door");
+            openSound.Play();
+            animator.SetBool(Opening, true);
+        }
+        
     }
 
     public void Close()
     {
-        gameObject.SetActive(false);
+        if (!animator.GetBool(Closing))
+        {
+            animator.SetBool(Closing, true);
+        }
+    }
+
+    public void Opened()
+    {
+        animator.SetBool(Opening, false);
+    }
+
+    public void Closed()
+    {
+        closeSound.Play();
+        animator.SetBool(Closing, false);
     }
 }
