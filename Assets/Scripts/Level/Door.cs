@@ -44,7 +44,7 @@ public class Door : MonoBehaviour,IInteractable
 
     public void Open()
     {
-        door.SetActive(false);
+        //door.SetActive(false);
         col.enabled = false;
         if (!animator.GetBool(Opening))
         {
@@ -57,7 +57,7 @@ public class Door : MonoBehaviour,IInteractable
 
     public void Close()
     {
-        door.gameObject.SetActive(false);
+        //door.gameObject.SetActive(false);
         col.enabled = false;
         if (!animator.GetBool(Closing))
         {

@@ -54,8 +54,8 @@ MonoBehaviour:
   gridPosition: {x: 0, y: 0}
   FakePositions: []
   doors:
-  - {fileID: 5367970376211716109}
-  - {fileID: 6888178844759534978}
+  - {fileID: 8680340131373961746}
+  - {fileID: 7899214705094764445}
   hallwayStyle: {fileID: 11400000, guid: 7fb8263e96512c444b5e57f5e3cac61d, type: 2}
 --- !u!1 &8849340971067319602
 GameObject:
@@ -286,6 +286,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 970893258742778326, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1318791941225619986, guid: 8cf647375e4af02468968b1236edb303,
         type: 3}
       propertyPath: m_Shape
@@ -396,6 +401,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5046384212836993882, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056111609848807092, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6575774668414663599, guid: 8cf647375e4af02468968b1236edb303,
         type: 3}
       propertyPath: m_Mesh
@@ -434,9 +449,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 796615032259469477}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6888178844759534978 stripped
+--- !u!114 &7899214705094764445 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6096078447527808295, guid: 8cf647375e4af02468968b1236edb303,
+  m_CorrespondingSourceObject: {fileID: 7390830070999861048, guid: 8cf647375e4af02468968b1236edb303,
     type: 3}
   m_PrefabInstance: {fileID: 796615032259469477}
   m_PrefabAsset: {fileID: 0}
@@ -668,6 +683,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 970893258742778326, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1318791941225619986, guid: 8cf647375e4af02468968b1236edb303,
         type: 3}
       propertyPath: m_Shape
@@ -778,6 +798,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5046384212836993882, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056111609848807092, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6575774668414663599, guid: 8cf647375e4af02468968b1236edb303,
         type: 3}
       propertyPath: m_Mesh
@@ -816,9 +846,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2226822832906835242}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5367970376211716109 stripped
+--- !u!114 &8680340131373961746 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6096078447527808295, guid: 8cf647375e4af02468968b1236edb303,
+  m_CorrespondingSourceObject: {fileID: 7390830070999861048, guid: 8cf647375e4af02468968b1236edb303,
     type: 3}
   m_PrefabInstance: {fileID: 2226822832906835242}
   m_PrefabAsset: {fileID: 0}

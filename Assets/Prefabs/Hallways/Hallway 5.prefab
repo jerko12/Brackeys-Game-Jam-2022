@@ -52,7 +52,7 @@ MonoBehaviour:
   gridPosition: {x: 0, y: 0}
   FakePositions: []
   doors:
-  - {fileID: 1325873463224356769}
+  - {fileID: 2336925266534548926}
   hallwayStyle: {fileID: 11400000, guid: 7fb8263e96512c444b5e57f5e3cac61d, type: 2}
 --- !u!1 &8923858075918989700
 GameObject:
@@ -283,6 +283,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 970893258742778326, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1318791941225619986, guid: 8cf647375e4af02468968b1236edb303,
         type: 3}
       propertyPath: m_Shape
@@ -393,6 +398,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5046384212836993882, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056111609848807092, guid: 8cf647375e4af02468968b1236edb303,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6575774668414663599, guid: 8cf647375e4af02468968b1236edb303,
         type: 3}
       propertyPath: m_Mesh
@@ -431,9 +446,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5116069314269905542}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1325873463224356769 stripped
+--- !u!114 &2336925266534548926 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6096078447527808295, guid: 8cf647375e4af02468968b1236edb303,
+  m_CorrespondingSourceObject: {fileID: 7390830070999861048, guid: 8cf647375e4af02468968b1236edb303,
     type: 3}
   m_PrefabInstance: {fileID: 5116069314269905542}
   m_PrefabAsset: {fileID: 0}
