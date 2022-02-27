@@ -19,7 +19,7 @@ public class Clock : MonoBehaviour,IInteractable
 
     [SerializeField] private int selectedHallway = 1;
     [SerializeField] private UnityEvent<int> hallwayChanged;
-    private bool rotating = false;
+    public bool rotating = false;
 
     public void Selected()
     {
@@ -38,6 +38,15 @@ public class Clock : MonoBehaviour,IInteractable
         Debug.Log("Interacted");
     }
 
+    private void Start()
+    {
+        cameraManager = CameraManager.Instance;
+        inputManager = InputManager.Instance;
+        player = PlayerManager.Instance.player;
+        clockState = player.clock;
+
+    }
+
     private void Update()
     {
         RotateHourHandToPosition();
@@ -45,10 +54,13 @@ public class Clock : MonoBehaviour,IInteractable
 
     public void RotateHourHandToPosition()
     {
-        Vector3 to = new Vector3(0, 0, selectedHallway * 45);
-            if (Vector3.Distance(hourHand.eulerAngles, to) > 0.01f)
+        //Vector3 to = new Vector3(90, 0, selectedHallway * 45);
+        Quaternion goalRotation = Quaternion.Euler(90, 0, selectedHallway * 45);
+       // Debug.Log(to + "  " + hourHand.localRotation.eulerAngles);
+        //f (Vector3.Distance(hourHand.localRotation.eulerAngles, to) > 0.05f)
+            if (Quaternion.Angle(hourHand.localRotation, goalRotation) > 1)
             {
-                hourHand.rotation = Quaternion.Lerp(hourHand.rotation, Quaternion.Euler(0, 0, selectedHallway * 45), rotationSpeed * Time.deltaTime);
+                hourHand.localRotation = Quaternion.Lerp(hourHand.localRotation, goalRotation, rotationSpeed * Time.deltaTime);
                 rotating = true;
             }
             else

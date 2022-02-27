@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public Interactionhandler interactionhandler;
     
     public PlayerWalkingState walk;
-    [SerializeField] private PlayerClockState clock;
+    public PlayerClockState clock;
     public GameObject camPosition;
 
     public enum state
